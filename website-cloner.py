@@ -20,7 +20,7 @@ def download_website(url):
     print(f"{Fore.YELLOW}Starting website clone...{Style.RESET_ALL}")
     
     # Command to download website with wget and save it in the specified directory
-    command = f'wget -mpEkP {save_dir} "{url}"'
+    command = f'wget -mpEk {save_dir} "{url}"'
 
     # Run the wget command
     process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
